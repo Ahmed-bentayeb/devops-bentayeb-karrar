@@ -1,5 +1,7 @@
 import pytest
-from cart import average, total, apply_discount, shipping
+
+from cart import apply_discount, average, shipping, total
+
 
 def test_average():
     assert average([10, 20]) == 15

@@ -1,5 +1,6 @@
 """Build the shop's web page into site/index.html."""
 import os
+
 from cart import shipping, total
 
 ITEMS = {"Notebook": 4, "Pen": 2, "Backpack": 45}

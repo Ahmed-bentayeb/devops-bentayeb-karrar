@@ -1,6 +1,6 @@
 import pytest
 
-from cart import apply_discount, average, shipping, total
+from cart import apply_discount, average, shipping, total , TAX_RATE
 
 
 def test_average():
@@ -28,3 +28,6 @@ def test_shipping_free_from_50():
 def test_discount_over_100_is_refused():
     with pytest.raises(ValueError):
         apply_discount([100], 150)
+
+def test_tax_rate_is_a_fraction():
+    assert 0 <= TAX_RATE < 1
